@@ -8,8 +8,7 @@ public class MovieApp {
     public static void  main (String[] args) {
         AnnotationConfigApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(MovieApp.class);
-        BestMovieService bestMovieService =
-                applicationContext.getBean("bestMovieService", BestMovieService.class);
+        BestMovieService bestMovieService = applicationContext.getBean("bestMovieService", BestMovieService.class);
         Movie bestMovie = bestMovieService.getBestMovie();
 
         System.out.println("Title: " + bestMovie.getTitle());
